@@ -1,0 +1,350 @@
+/* =====================================================
+   FESTIVAL CALENDAR SECTION
+===================================================== */
+
+
+/* Overall Festival Calendar Section Styling */
+
+.festival-calendar {
+
+    background-color:#ffffff;
+
+    padding:80px 40px;
+
+    text-align:center;
+
+    margin:0 auto;
+
+    width:100%;
+
+    max-width:1300px;
+
+    box-sizing:border-box;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+
+    border:1px solid #e0e0e0;
+
+    overflow:hidden;
+
+}
+
+
+/* Header Styling */
+
+.festival-calendar .calendar-header {
+
+    margin-bottom:50px;
+
+}
+
+
+.festival-calendar h2 {
+
+    font-family:'Helvetica Neue',sans-serif;
+
+    font-size:3rem;
+
+    color:#333;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.festival-calendar p {
+
+    font-size:1.1rem;
+
+    color:#777;
+
+    margin-bottom:40px;
+
+    font-family:'Roboto',sans-serif;
+
+}
+
+
+
+/* ============================
+      TABLE STYLING
+============================ */
+
+
+.festival-table {
+
+    width:100%;
+
+    max-width:100%;
+
+    border-collapse:collapse;
+
+    margin:0 auto;
+
+    table-layout:fixed;
+
+    border:2px solid #e0e0e0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+.festival-table th,
+.festival-table td {
+
+
+    padding:20px 15px;
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    font-family:'Roboto',sans-serif;
+
+    border:1px solid #e0e0e0;
+
+    word-wrap:break-word;
+
+    overflow-wrap:break-word;
+
+}
+
+
+
+/* Header */
+
+.festival-table th {
+
+
+    background-color:#00695c;
+
+    color:white;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* Body */
+
+.festival-table td {
+
+
+    background-color:#f9f9f9;
+
+    color:#333;
+
+    text-align:left;
+
+}
+
+
+
+/* Remove carousel effects */
+
+.festival-table tr:hover {
+
+
+    transform:none;
+
+}
+
+
+
+/* Desktop hover only */
+
+@media (hover:hover){
+
+
+.festival-table tr:hover td {
+
+
+    background:#f4e1a1;
+
+    color:#004d40;
+
+}
+
+
+}
+
+
+
+/* Remove active scaling */
+
+.festival-table tr:active {
+
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+
+/* Smooth transition only */
+
+.festival-table th,
+.festival-table td {
+
+
+    transition:background-color .3s ease,
+               color .3s ease;
+
+}
+
+
+
+
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+===================================================== */
+
+
+@media(max-width:768px){
+
+
+.festival-calendar {
+
+
+    padding:40px 8px;
+
+    width:100%;
+
+}
+
+
+
+.festival-calendar h2 {
+
+
+    font-size:2rem;
+
+}
+
+
+
+.festival-calendar p {
+
+
+    font-size:0.95rem;
+
+}
+
+
+
+/* Table fix */
+
+.festival-table {
+
+
+    width:100%;
+
+    table-layout:fixed;
+
+}
+
+
+
+.festival-table th,
+.festival-table td {
+
+
+    padding:10px 5px;
+
+    font-size:0.78rem;
+
+    word-break:break-word;
+
+    overflow-wrap:anywhere;
+
+}
+
+
+
+/* Column size control */
+
+
+.festival-table th:nth-child(1),
+.festival-table td:nth-child(1){
+
+    width:35%;
+
+}
+
+
+.festival-table th:nth-child(2),
+.festival-table td:nth-child(2){
+
+    width:20%;
+
+}
+
+
+.festival-table th:nth-child(3),
+.festival-table td:nth-child(3),
+
+.festival-table th:nth-child(4),
+.festival-table td:nth-child(4){
+
+    width:22.5%;
+
+}
+
+
+}
+
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+
+@media(max-width:480px){
+
+
+.festival-calendar {
+
+
+    padding:30px 5px;
+
+}
+
+
+
+.festival-calendar h2 {
+
+
+    font-size:1.6rem;
+
+}
+
+
+
+.festival-table th,
+.festival-table td {
+
+
+    padding:8px 3px;
+
+    font-size:0.72rem;
+
+}
+
+
+}

@@ -1,0 +1,321 @@
+/* =========================
+   FULL-SCREEN CINEMATIC SLIDER
+========================= */
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/*
+  The image layer is separate from the text so it can move without making
+  headings, buttons, or the dark overlay appear to zoom as well.
+*/
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  z-index: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* The previous image stays above the incoming one while both fade. */
+.slide.leaving {
+  opacity: 0;
+  z-index: 3;
+}
+
+/* Zoom is used only while one slide replaces another. */
+.slide.leaving::after {
+  animation: slider-zoom-in 1.2s ease-in-out both;
+}
+
+.slide.entering::after {
+  animation: slider-zoom-out 1.2s ease-in-out both;
+}
+
+@keyframes slider-zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slider-zoom-out {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* DARK CINEMATIC OVERLAY */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.25)
+  );
+  z-index: 1;
+}
+
+/* Slide content */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 30px;
+  opacity: 1;
+
+  /* Extra readability */
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+  /* Sharper text rendering */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+}
+
+/* Floating animation (kept for future use if needed) */
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Text animation */
+.slide-content h1,
+.slide-content p,
+.slide-content .btn {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.slide.active .slide-content h1,
+.slide.active .slide-content p,
+.slide.active .slide-content .btn {
+  opacity: 1;
+}
+
+/* Heading */
+.slide-content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+/* Paragraph */
+.slide-content p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Subtitle with centered decorative dash lines */
+.subtitle {
+  font-size: 1.2rem !important;
+  color: #e6ad00 !important;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  line-height: 1;
+}
+
+
+/* Left dash line */
+.subtitle::before {
+  content: "";
+  width: 70px;
+  height: 1px;
+  display: inline-block;
+  background: linear-gradient(to right, transparent, #e6ad00);
+}
+
+
+/* Right dash line */
+.subtitle::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  display: inline-block;
+  background: linear-gradient(to left, transparent, #e6ad00);
+}
+
+/* Primary button */
+.slide-content .btn {
+  display: inline-block;
+  padding: 10px 35px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: #d1a84b;
+  color: #111;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide-content .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Secondary button */
+.slide-content .btn2 {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Navigation arrows */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  z-index: 3;
+}
+
+.slider-nav:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.slider-nav.prev {
+  left: 20px;
+}
+
+.slider-nav.next {
+  right: 20px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .slide-content h1 {
+    font-size: 3rem;
+  }
+
+  .slide-content p {
+    font-size: 1.5rem;
+  }
+
+  .slide-content .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .slider-nav {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .slide-content p {
+    font-size: 1.1rem;
+  }
+
+  .slide-content .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .slider-nav {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:768px){
+
+  .subtitle::before,
+  .subtitle::after{
+    width:35px;
+  }
+
+  .subtitle{
+    font-size:1rem !important;
+    gap:10px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide.leaving::after,
+  .slide.entering::after {
+    animation: none;
+  }
+}

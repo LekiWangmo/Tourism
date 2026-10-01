@@ -1,0 +1,188 @@
+/* ================= BTC FOOTER ================= */
+.btc-footer {
+  background: #002c0f;
+  color: #ddd;
+  font-family: 'Poppins', sans-serif;
+  padding: 70px 20px 20px;
+}
+
+.btc-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Logo */
+.btc-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.btc-col h3 {
+  color: #d1a84b;
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  font-family:"cormorant garamond";
+}
+
+
+
+/* Text */
+.btc-col li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+  text-align: left;
+}
+.btc-col p{
+	font-size: 14px;
+	line-height: 1.5;
+	color: #ccc;
+	text-align: left;
+}
+
+.btc-col h6 {
+  color: #fff;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Links */
+.btc-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btc-col ul li {
+  margin-bottom: 10px;
+}
+
+.btc-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.btc-col ul li a:hover {
+  color: #ffcc00;
+  padding-left: 6px;
+}
+
+/* General Styling for Social Icons */
+.btc-socials a {
+    text-decoration: none;
+    margin: 0;
+    font-size: 24px; /* Adjust size of icons */
+    color: white; /* White icon color */
+    background-color: #194125;
+    border: 1px solid transparent; /* Transparent border to avoid outline conflicts */
+    border-radius: 50%; /* Circular border */
+    padding: 7px; /* Padding around the icon */
+    width: 45px; /* Set fixed width */
+    height: 45px; /* Set fixed height */
+    display: inline-block;
+    text-align: center;
+    line-height: 30px; /* Align the icon vertically */
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in the element's size */
+}
+
+/* Hover effect for social icons */
+.btc-socials a:hover {
+    background-color: #32553d; /* Add background on hover */
+    color: #fff; /* Green color for icon on hover */
+    border-color: #4CAF50; /* Green outline on hover */
+}
+
+/* Optional: Style for the logo */
+.btc-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+/* ================= COPYRIGHT ================= */
+.btc-copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #2a3550;
+  padding-top: 18px;
+}
+
+/* Wrapper */
+.whatsapp-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  
+}
+
+/* Floating button */
+.whatsapp-float {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-wrapper:hover .whatsapp-float img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px; /* distance from icon */
+  background: #32553d; /* default green */
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover style (background & font color) */
+.whatsapp-wrapper:hover .whatsapp-tooltip {
+  background: #128C7E; /* dark green */
+  color: #FFD700; /* golden text */
+  font-weight: 600;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .btc-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .btc-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,7 @@
+.local-php/
+*.log
+local-secrets.php
+generate_hash.php
+.env
+.env.*
+!.env.example

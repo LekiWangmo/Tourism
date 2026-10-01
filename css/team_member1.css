@@ -1,0 +1,92 @@
+/* Sub Team Section */
+.sub-team-section {
+    background: #f0f4f8;
+    padding: 60px 20px 100px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;   /* more space between cards */
+    flex-wrap: wrap;
+}
+
+/* Bigger Square Cards */
+.team-card {
+    position: relative;
+    width: 350px;        /* bigger width */
+    aspect-ratio: 1 / 1; /* keep square */
+	border: 5px solid #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image fills the card */
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    transition: transform 0.3s ease;
+	object-fit:contain;
+	
+}
+
+.team-card:hover img {
+    transform: scale(1.05); /* small zoom on hover */
+}
+
+/* Overlay at bottom */
+.team-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55); /* semi-transparent black */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Name and Role */
+.member-name {
+    margin: 0;
+    font-size: 20px;   /* bigger font */
+    font-weight: 600;
+}
+
+.member-role {
+    margin: 6px 0 12px 0;
+    font-size: 16px;
+    color: #d4af37;   /* golden color */
+}
+
+/* Back button inside overlay */
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 20px; /* bigger button */
+    font-size: 16px;
+    background-color: #d4af37;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #053245;
+}
+
+/* Responsive for small screens */
+@media (max-width: 992px) {
+    .team-card {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 20px;
+    }
+}

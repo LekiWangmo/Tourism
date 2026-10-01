@@ -1,0 +1,13 @@
+/* =========================================================
+   GLOBAL CSS SETTINGS
+========================================================= */
+
+/* ------------------ Body & HTML ------------------ */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;      /* prevent horizontal scrollbar */
+    scroll-behavior: smooth; /* smooth scrolling */
+   
+}
+

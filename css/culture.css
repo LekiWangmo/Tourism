@@ -1,0 +1,162 @@
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #dee5df;
+    color: #333;
+}
+
+/* ================= FEATURED SECTION ================= */
+.featured-section {
+    padding: 50px 8% 80px;
+    background: #ffffff;
+    text-align: center;
+}
+
+/* ================= TEXT STYLES ================= */
+.subtitle {
+    display: block;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #003324; /* Updated color */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'League Spartan', sans-serif; /* Updated font */
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #003324;
+    text-transform: uppercase;
+    font-family: "League Spartan", sans-serif;
+    margin-bottom: 15px;
+}
+
+.description {
+    max-width: 900px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #003324;
+    font-family: "League Spartan", sans-serif;
+}
+
+/* ================= GRID ================= */
+.destination-grid {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+.destination-card {
+    position: relative;
+    width: 270px;
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ================= OVERLAY ================= */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.45) 50%,
+        rgba(0,0,0,0.1) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+}
+
+/* ================= CARD CONTENT ================= */
+.card-content {
+    text-align: left;
+    color: #fff;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.card-content p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* ================= LINK ================= */
+.explore-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #d8a63c;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.destination-card:hover .explore-link {
+    letter-spacing: 1px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .featured-section {
+        padding: 40px 15px 70px;
+    }
+
+    .destination-grid {
+        gap: 14px;
+    }
+
+    .destination-card {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}

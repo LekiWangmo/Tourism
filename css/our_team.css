@@ -1,0 +1,125 @@
+/* =========================
+GENERAL CONTAINER
+========================= */
+.container-fixed {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================
+TEAM SECTION
+========================= */
+.team-section {
+    background: #f8fafc;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Team Member Box */
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.team-member.reverse {
+    flex-direction: row-reverse;
+}
+
+.team-text {
+    flex: 1;
+}
+
+.team-text h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.team-text h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #d4af37;
+}
+
+.team-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* =========================
+BUTTONS
+========================= */
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #d4af37;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #053245;
+    transform: translateY(-2px);
+}
+
+/* =========================
+TEAM IMAGE
+========================= */
+.team-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.team-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+	object-fit:contain;
+}
+
+.team-image img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+RESPONSIVE DESIGN
+========================= */
+@media (max-width: 992px) {
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .sub-team-section .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-team-section .team-slide {
+        max-width: 90%;
+    }
+
+    .scroll-content {
+        padding: 30px 20px;
+    }
+}

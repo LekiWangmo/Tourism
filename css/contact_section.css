@@ -1,0 +1,169 @@
+/* =========================
+   CONTACT HERO SECTION
+========================= */
+
+.contact-planning-section {
+    position: relative;
+
+    /* Background image */
+    background-image: url('../images/experiences/contact1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Height control */
+    min-height: 450px;
+    height: 60vh;
+
+    /* Center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    filter: saturate(1.1) contrast(0.95);
+}
+
+/* =========================
+   DARK BLUE OVERLAY
+========================= */
+
+.contact-planning-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* DARK BLUE OVERLAY */
+    background: rgba(2, 25, 60, 0.65); /* Ensures content stands out against image */
+
+    z-index: 1;
+}
+
+/* =========================
+   CONTENT CONTAINER
+========================= */
+
+.section-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   HEADING TEXT
+========================= */
+
+.start-planning {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    color: #ffffff; /* White text to contrast against dark overlay */
+
+    margin-bottom: 25px;
+
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   PREHEADING STYLES
+========================= */
+
+.preheading {
+    font-size: 18px;
+    color: #f1c40f; /* Yellow for contrast, matching button color */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px; /* Adds space between preheading and main heading */
+    text-align: center; /* Center aligns the text */
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.inquire-now {
+    display: inline-block;
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    padding: 14px 32px;
+
+    background-color: #f1c40f; /* Yellow for attention-grabbing action button */
+    color: #0b1c3d; /* Dark blue text color for contrast */
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.inquire-now:hover {
+    background-color: #ffffff;
+    color: #0b1c3d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   SECTION HOVER EFFECT
+========================= */
+
+.contact-planning-section:hover {
+    transform: scale(1.01);
+    transition: transform 0.4s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1024px) {
+    .contact-planning-section {
+        min-height: 420px;
+        height: 55vh;
+    }
+
+    .start-planning {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-planning-section {
+        min-height: 320px;
+        height: auto;
+        padding: 60px 15px;
+    }
+
+    .start-planning {
+        font-size: 28px;
+    }
+
+    .inquire-now {
+        font-size: 15px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-planning {
+        font-size: 24px;
+    }
+
+    .inquire-now {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

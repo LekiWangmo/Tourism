@@ -1,0 +1,188 @@
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body always takes up at least full viewport height */
+}
+
+/* Hero Section Custom Styling (Optional) */
+.slider {
+    height: 13vh;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slide-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Reset the margin for proper centering */
+    padding: 20px 15px; /* Add padding for responsiveness */
+    flex-grow: 1;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+    min-height: 100px; /* Ensure each section has enough space */
+}
+
+h2, h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f1c40f; /* Golden accent */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #f39c12;
+}
+
+ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f39c12;
+}
+
+/* Terms and Conditions */
+.terms-conditions {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.terms-conditions ul {
+    margin-left: 40px;
+}
+
+.terms-conditions ul li {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.terms-conditions h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.terms-conditions p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ensure Content is Always Visible */
+html, body {
+    height: 100%;
+}
+
+main {
+    flex-grow: 1; /* Ensures the main content takes up the full available space */
+    padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .slider {
+        height: 40vh; /* Make the slider shorter on tablets */
+    }
+
+    .slider .slide-content {
+        font-size: 1.5rem;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 50vh; /* Make the slider smaller on mobile screens */
+    }
+
+    .slider .slide-content {
+        font-size: 1.5rem;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}

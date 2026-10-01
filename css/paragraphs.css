@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* Match the homepage About Bhutan copy without changing page chrome or banners. */
+p:not(:where(header *, nav *, footer *, .main-header *, .slide-content *, .slider *, .hero *, .hero-section *)) {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* Keep inline emphasis and links in the same font, preserving their weights. */
+p:not(:where(header *, nav *, footer *, .main-header *, .slide-content *, .slider *, .hero *, .hero-section *)) :where(a, strong, b, em) {
+    font-family: 'Manrope', sans-serif !important;
+}

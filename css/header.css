@@ -1,0 +1,229 @@
+/* RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 999;
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    transition: background 0.3s ease;
+}
+
+/* SCROLLED HEADER */
+.main-header.scrolled {
+    background: rgba(223, 223, 223, 0.95);
+}
+
+/* LOGO */
+.logo-wrapper img {
+    height: 100px;
+    width: auto;
+    display: block;
+    transition: height 0.3s ease;
+}
+
+.main-header.scrolled .logo-wrapper img {
+    height: 80px;
+}
+
+/* HEADER RIGHT */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* BUTTONS */
+.header-right .btn-outline {
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.main-header.scrolled .header-right .btn-outline {
+    border-color: #003324;
+    color: #003324 !important;
+    background: transparent;
+}
+
+.main-header.scrolled .header-right .btn-outline:hover {
+    background: #003324;
+    color: #fff !important;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    gap: 5px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* SCROLLED HAMBURGER */
+.main-header.scrolled .hamburger span {
+    background: #1e2a47;
+}
+
+/* ACTIVE HAMBURGER */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* NAV MENU */
+#nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 20px;
+
+    z-index: 1000;
+    transition: right 0.35s ease;
+
+    overflow-y: auto;
+}
+
+#nav-menu.active {
+    right: 0;
+}
+
+/* LINKS */
+#nav-menu a {
+    color: #222;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+#nav-menu a:hover {
+    color: #f1c40f;
+}
+
+/* SUBMENU */
+.submenu > a::after {
+    content: " ▼";
+    font-size: 12px;
+}
+
+.submenu-items {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    margin-left: 10px;
+    transition: max-height 0.35s ease;
+}
+
+.submenu:hover .submenu-items {
+    max-height: 500px;
+}
+
+.submenu-items a {
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+/* OVERLAY */
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 998;
+
+    transition: all 0.3s ease;
+}
+
+#menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================= */
+/* FIXED CLOSE BUTTON LOGIC  */
+/* ========================= */
+
+.menu-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    font-size: 36px;
+    cursor: pointer;
+
+    color: #1e2a47;
+
+    display: none; /* default hidden */
+}
+
+/* SHOW CLOSE BUTTON ONLY WHEN MENU IS OPEN */
+#nav-menu.active .menu-close {
+    display: block;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media screen and (max-width: 767px) {
+
+    .header-right .btn-outline {
+        display: none;
+    }
+
+    .logo-wrapper img {
+        height: 70px;
+    }
+}

@@ -1,0 +1,164 @@
+/* =========================
+   FULL-SCREEN CINEMATIC SLIDER
+========================= */
+
+.slider {
+  width: 100%;
+  height: 65vh; /* adjust as necessary */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* Gradient overlay to enhance text readability */
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  z-index: 1;
+}
+
+/* Slide content */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 30px;
+  animation: floatText 6s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center; /* centers horizontally */
+  height: 100%; /* ensure the full height is used */
+  text-align: center;
+}
+
+/* Floating animation */
+@keyframes floatText {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Slide text elements */
+.slide-content h1,
+.slide-content p,
+.slide-content .btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Show text when slide is active */
+.slide.active .slide-content h1,
+.slide.active .slide-content p,
+.slide.active .slide-content .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Heading and paragraph sizes */
+.slide-content h1 {
+  font-size: 4rem; /* bigger text */
+  margin-bottom: 25px;
+}
+
+.slide-content p {
+  font-size: 2rem; /* bigger text */
+  margin-bottom: 30px;
+}
+
+/* Slide button */
+.slide-content .btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  background: #f0c040;
+  color: #111;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide-content .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Navigation arrows */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  z-index: 3;
+}
+
+.slider-nav:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.slider-nav.prev { left: 20px; }
+.slider-nav.next { right: 20px; }
+
+/* ================= Scroll Fade-In Animation ================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px){
+  .slide-content h1 { font-size: 3rem; }
+  .slide-content p { font-size: 1.5rem; }
+  .slide-content .btn { font-size: 1rem; padding: 12px 25px; }
+  .slider-nav { font-size: 2.5rem; padding: 5px 8px; }
+}
+
+@media screen and (max-width: 768px){
+  .slide-content h1 { font-size: 2.2rem; }
+  .slide-content p { font-size: 1.1rem; }
+  .slide-content .btn { font-size: 1rem; padding: 10px 20px; }
+  .slider-nav { font-size: 2rem; padding: 4px 7px; }
+}

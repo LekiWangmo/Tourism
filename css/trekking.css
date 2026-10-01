@@ -1,0 +1,572 @@
+/* =====================================================
+   TREKKING PAGE RESPONSIVE CSS
+   TAREMA TOURS BHUTAN
+===================================================== */
+
+
+/* GLOBAL */
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+
+.trek-hero{
+
+    width:100%;
+    min-height:75vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("../images/trekking.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+
+.trek-hero .overlay{
+
+    width:100%;
+    max-width:1000px;
+
+    color:white;
+
+}
+
+
+
+.trek-hero h1{
+
+    font-size:clamp(32px,5vw,60px);
+
+    font-family:Georgia,serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.trek-hero p{
+
+    font-size:clamp(16px,2vw,24px);
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================================
+   INTRO SECTION
+===================================================== */
+
+
+.trek-container{
+
+    width:100%;
+
+    padding:
+    clamp(40px,6vw,80px)
+    20px;
+
+}
+
+
+
+.intro-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+
+.intro-grid h2{
+
+    font-size:clamp(28px,4vw,42px);
+
+    color:#245438;
+
+}
+
+
+
+.intro-grid p{
+
+    font-size:clamp(15px,1.5vw,18px);
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+
+
+.intro-grid img{
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:20px;
+
+}
+
+
+
+/* =====================================================
+   WHY TREK CARDS
+===================================================== */
+
+
+.why-trek{
+
+    background:#edf3ed;
+
+    padding:
+    clamp(40px,6vw,80px)
+    20px;
+
+    text-align:center;
+
+}
+
+
+
+.why-trek h2{
+
+    font-size:clamp(28px,4vw,42px);
+
+    color:#245438;
+
+}
+
+
+
+.cards{
+
+    max-width:1200px;
+
+    margin:40px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:35px 25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.card h3{
+
+    color:#245438;
+
+    font-size:22px;
+
+}
+
+
+.card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================================
+   FACTS
+===================================================== */
+
+
+.facts{
+
+    background:#245438;
+
+    color:white;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    gap:25px;
+
+}
+
+
+.fact h3{
+
+    font-size:clamp(30px,4vw,45px);
+
+    margin:0;
+
+}
+
+
+.fact p{
+
+    font-size:17px;
+
+}
+
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+
+.trek-table{
+
+    width:100%;
+
+    padding:
+    clamp(40px,6vw,80px)
+    20px;
+
+}
+
+
+
+.trek-table h2{
+
+    text-align:center;
+
+    font-size:clamp(28px,4vw,42px);
+
+    color:#245438;
+
+}
+
+
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+
+
+table{
+
+    width:100%;
+
+    min-width:900px;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th{
+
+    background:#245438;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+tr:hover{
+
+    background:#f2f6f2;
+
+}
+
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+
+.trek-cta{
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+    url("../images/experiences/punakha.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    padding:
+    clamp(50px,8vw,100px)
+    20px;
+
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.trek-cta h2{
+
+    font-size:clamp(28px,4vw,45px);
+
+}
+
+
+
+.trek-cta p{
+
+    max-width:850px;
+
+    margin:25px auto;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    background:#d4af37;
+
+    color:white;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1024px){
+
+
+.intro-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.intro-grid img{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+.cards{
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+
+.facts{
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+
+@media(max-width:600px){
+
+
+.trek-hero{
+
+    min-height:55vh;
+
+}
+
+
+.trek-hero h1{
+
+    line-height:1.2;
+
+}
+
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.facts{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.card{
+
+    padding:25px 18px;
+
+}
+
+
+
+.trek-cta p{
+
+    font-size:16px;
+
+}
+
+
+
+.btn{
+
+    padding:13px 30px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:375px){
+
+
+.trek-hero h1{
+
+    font-size:30px;
+
+}
+
+
+.intro-grid h2{
+
+    font-size:26px;
+
+}
+
+
+}

@@ -1,0 +1,65 @@
+/* =========================
+   Restore Plan Your Bhutan Journey / Booking Section
+========================= */
+.booking-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.booking-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.booking-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.booking-form button {
+    background: #7bbf2a;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #6da01e;
+    transform: translateY(-2px);
+}
+
+/* Booking Success Message */
+.success-msg {
+    background: #e7f6d5;
+    color: #2e6b1f;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}

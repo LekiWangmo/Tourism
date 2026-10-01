@@ -1,0 +1,286 @@
+/* =========================
+TEAM SECTION - TAREMA TOURS
+Matches Why Choose Header Style
+========================= */
+
+.team-section {
+    background: linear-gradient(135deg, #fdf8f0, #f4ede3);
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.container-fixed {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+PRE-HEADING (Luxury Gold Style)
+========================= */
+
+.team-section .pre-heading {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #d4af37;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.team-section .pre-heading::before,
+.team-section .pre-heading::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background: #d4af37;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+
+/* =========================
+MAIN HEADING
+========================= */
+
+.team-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* =========================
+DESCRIPTION
+========================= */
+
+.team-section .section-description {
+    text-align: center;
+    max-width: auto;
+    margin: 0 auto 70px auto;
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.9;
+    color: #555;
+    font-weight: 400;
+    position: relative;
+}
+
+.team-section .section-description::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: #d4af37;
+    margin: 20px auto 0;
+}
+
+/* =========================
+TEAM CARDS
+========================= */
+
+.team-container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.team-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-slide {
+    flex: 0 0 calc((100% / 3) - 15px);
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+
+}
+
+.team-slide img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0%);
+  transition: all 0.4s ease;
+  object-fit:contain;
+}
+
+/* Overlay Info */
+.team-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 1;                  /* always visible */
+    transform: translateY(0);     /* no translation */
+    transition: all 0.4s ease;
+    color: #fff;
+    background: rgba(0,0,0,0.65);
+    padding: 14px 10px;
+    box-sizing: border-box;
+}
+
+/* Name */
+.member-name {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+}
+
+.member-name::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #d4af37;
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+/* Role */
+.member-role {
+    font-size: clamp(13px, 1.5vw, 15px);
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Hover Effects */
+.team-slide:hover img {
+    transform: scale(1.05);
+}
+
+.team-slide:hover .team-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+}
+/* Hyperlink wrapper */
+.team-slide a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+/* Center the read more link */
+.read-more-container {
+    text-align: center;
+    margin-top: 30px; /* space from text above */
+}
+
+/* Center the read more link */
+.read-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+/* Center the read more link */
+.read-more-container {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Link styling */
+.read-more-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e0b957; /* gold */
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    overflow: display; /* contain pseudo-element */
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: #053245; /* dark blue on hover */
+}
+
+/* Arrow animation */
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 20px;
+    animation: slideArrow 1s infinite alternate;
+}
+
+/* Slide animation keyframes */
+@keyframes slideArrow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(15px); }
+}
+
+/* Hover “boom/blast” effect using pseudo-element */
+.read-more-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(224, 185, 87, 0.3); /* golden blast */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+/* Continuous animation while hovering */
+.read-more-link:hover::after {
+    animation: boomBlast 1s ease-out infinite;
+}
+
+/* Keyframes for the boom blast ripple */
+@keyframes boomBlast {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    50% {
+        width: 120px;
+        height: 120px;
+        opacity: 0.3;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+    .team-slide {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-slide {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .team-section {
+        padding: 80px 20px;
+    }
+}

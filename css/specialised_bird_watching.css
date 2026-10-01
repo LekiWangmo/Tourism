@@ -1,0 +1,542 @@
+/* ============================= */
+/* GENERAL STYLES */
+/* ============================= */
+
+h1, h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ============================= */
+/* SLIDER */
+/* ============================= */
+
+.slider {
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.slider .slide-content {
+    text-align: center;
+}
+
+.slider h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.slider p {
+    font-size: 1.25rem;
+}
+
+/* ============================= */
+/* KEY HIGHLIGHTS */
+/* ============================= */
+
+.key-highlights-section {
+    padding: 80px 20px;
+    background: #dee5df;
+    display: flex;
+    justify-content: center;
+}
+
+.text-section {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    max-width: 60%;
+    text-align: justify;
+}
+
+.image-section {
+    flex: 1;
+    text-align: right;
+}
+
+.team-image {
+    width: 70%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/* TOUR OVERVIEW SECTION */
+/* ============================= */
+
+.tour-section {
+    padding: 20px 0;
+    background: #ffffff;
+}
+
+/* CONTAINER WIDTH */
+
+.overview-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* TEXT CONTENT */
+
+.overview-content {
+    flex: 1;
+	padding-top: 20px;
+	color: #003324;
+	text-align: justify;
+	font-size: 1.07rem;  /* Reduced font size */
+	font-family: 'League Spartan', sans-serif;
+	font-weight: 500;
+}
+
+/* HEADING */
+
+.overview-content h2 {
+    text-align: left;
+    color: #003324;
+    text-transform: uppercase;
+    font-family: 'League Spartan';
+    font-weight: 800;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+/* PARAGRAPH */
+
+.overview-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5b6b75;
+    margin-bottom: 20px;
+}
+
+/* IMAGE SIDE */
+
+.overview-image {
+    flex: 0 0 40%;
+}
+
+/* IMAGE STYLE */
+
+.overview-image figure {
+    margin: 0;
+}
+
+.overview-image img {
+    width: 100%;
+    height: 250px;  /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.overview-image img:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE CAPTION */
+
+.overview-image figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f2a3c;
+}
+
+/* TOUR DURATION */
+
+.tour-duration {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.duration-icon {
+    font-size: 28px;
+    color: #0f2a3c;
+}
+
+.tour-duration strong {
+    display: block;
+    font-size: 16px;
+    color: #0f2a3c;
+}
+
+.tour-duration p {
+    font-size: 14px;
+    margin: 2px 0 0;
+    color: #5b6b75;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .overview-grid {
+        flex-direction: column;
+    }
+
+    .overview-image {
+        width: 100%;
+    }
+}
+
+/* ============================= */
+/* FULL WIDTH TOUR DETAILS */
+/* ============================= */
+
+.tour-details-section {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 90px 0;
+}
+
+/* 3 COLUMN GRID */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: start;
+}
+
+/* TOUR INFO GRID */
+
+.tour-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 30px 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: #dee5df;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  flex: 1;
+  padding-top: 20px;
+  color: #003324;
+  text-align: justify;
+  font-size: 1.07rem;  /* Reduced font size */
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+}
+
+.info-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    font-size: 22px;
+}
+
+.info-item h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #0f2a3c;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.info-item p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #5b6b75;
+}
+
+/* HIGHLIGHTS */
+.tour-highlights h2 {
+    text-align: left;
+    color: #003324;
+    text-transform: uppercase;
+    font-family: 'League Spartan';
+    font-weight: 800;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+	margin-top:0px;
+}
+
+.tour-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tour-highlights li {
+
+	font-family: 'League Spartan', sans-serif;
+    line-height: 1.4;
+	text-align: left;
+	color: #003324;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 22px;
+    transition: transform 0.2s ease;
+}
+
+.tour-highlights li:hover {
+    transform: translateX(3px);
+}
+
+.tour-highlights li::before {
+    content: "•";
+    color: #f47c20;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+}
+
+/* TOUR IMAGE */
+
+.tour-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tour-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.tour-image img:hover {
+    transform: scale(1.03);
+}
+
+/* ============================= */
+/* ITINERARY SECTION */
+/* ============================= */
+/* ============================= */
+/* ITINERARY SECTION */
+/* ============================= */
+
+.itinerary-section {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: justify;
+	line-height: 1.4;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #003324;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    transition: max-height 0.4s ease;
+	color:#003324;
+}
+
+.accordion-item {
+    border-top: 1px solid #e6e6e6;
+}
+
+.accordion-header {
+    background: #d9d9d9;
+    color: #003324;
+    padding: 22px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    border: 1px ridge #e1ebf6;
+    border-radius: 0px;
+}
+
+.accordion-header:hover {
+    background: #f1f3f4;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.day-badge {
+    display: inline-block;
+    background: transparent;
+    color: #0f2a3c;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+    border: 2px solid #0f2a3c;
+    border-radius: 0px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1;
+
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.25);
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.day-badge:hover {
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 1),
+        0 0 16px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.day-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #003324;
+}
+
+.arrow {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+    color: #0f2a3c;
+}
+
+.content-grid {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    text-align: left;
+	font-size:18px;
+	background:#eef4ed;
+}
+
+.content-grid img {
+    width: 100%; /* Ensure image takes the full width */
+    height: 250px; /* Set a fixed height for all images */
+    max-width: 350px; /* Set a max-width for consistency */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 8px;
+}
+
+.content-text {
+    flex: 1;
+
+	
+}
+
+.content-text h3 {
+    margin-top: 0;
+    color: #0a2f47;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 600px;
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(90deg);
+}
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .tour-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        max-width: 100%;
+    }
+
+    .image-section {
+        text-align: center;
+    }
+
+    .team-image {
+        width: 90%;
+    }
+
+    .overview-image {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .content-grid {
+        flex-direction: column;
+        text-align: justify;
+		font-size:15px;
+		padding:5px 10px;;
+    }
+
+    .content-grid img {
+        width: 80%;
+    }
+
+    .day-title {
+        max-width: 100%;
+    }
+}

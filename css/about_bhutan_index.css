@@ -1,0 +1,464 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap'); */
+
+/* ==================================================
+GENERAL STYLES
+================================================== */
+
+:root {
+    --bg-color:#f9f9f9;
+    --text-color:#333333;
+    --green:#003324;
+    --font-manrope: 'Manrope', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:#f9f9f9;
+}
+
+
+/* ==================================================
+ABOUT BHUTAN SECTION
+================================================== */
+
+.about-bhutan-magazine {
+
+    width:100%;
+    background:var(--bg-color);
+    padding:clamp(20px,5vw,50px) 0;
+    color:var(--green);
+    overflow:hidden;
+    padding-top:100px;
+}
+
+
+.about-bhutan-magazine .container {
+
+    width:min(92%,1500px);
+    margin:auto;
+
+}
+
+
+/* ==================================================
+TITLE
+================================================== */
+
+.about-bhutan-magazine .title {
+
+    color:var(--text-color);
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    text-transform:uppercase;
+    text-align: center;
+    font-size:clamp(24px,3vw,30px);
+    line-height:1.2;
+    letter-spacing:1px;
+    margin:0 0 20px;
+}
+
+
+/* ==================================================
+MAIN FLEX LAYOUT
+================================================== */
+
+.top-row {
+
+    display:flex;
+    align-items:stretch;
+    gap:clamp(25px,4vw,60px);
+
+}
+
+
+/* ==================================================
+TEXT COLUMN
+================================================== */
+
+.top-text {
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+
+    color:var(--text-color);
+
+    text-align: left;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: var(--font-manrope);
+    font-weight: 300;
+    font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.8;
+    padding: 0;
+}
+/* .top-text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    color: var(--text-color);
+    text-align: left;
+
+    font-family: 'font-manrope', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 300;
+
+    padding: 0;
+} */
+/* ==================================================
+IMAGE COLUMN
+================================================== */
+
+.image-container {
+
+    flex:1;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    aspect-ratio:4/3;
+
+    min-height:350px;
+
+}
+
+
+/* BLURRED CLOUD BACKGROUND */
+
+.image-container::before {
+
+    content:"";
+    position:absolute;
+    inset:-70px;
+
+    background:url("../images/bhutan_page_index/bhutan_pg7.jpg")
+        center/cover no-repeat;
+
+    /* filter:blur(70px); */
+
+    /* opacity:.45; */
+
+    transform:scale(1.3);
+
+}
+
+
+/* MAIN IMAGE */
+
+.overlapping-images {
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    position:relative;
+    z-index:2;
+
+
+    mask-image:
+    radial-gradient(
+        ellipse,
+        black 45%,
+        rgba(0,0,0,.7) 65%,
+        transparent 100%
+    );
+
+    -webkit-mask-image:
+    radial-gradient(
+        ellipse,
+        black 45%,
+        rgba(0,0,0,.7) 65%,
+        transparent 100%
+    );
+
+    animation:cloudReveal 2s ease forwards;
+
+}
+
+
+/* FOG EDGE */
+
+.image-container::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:-50px;
+
+    /* background:
+    radial-gradient(
+        ellipse,
+        transparent 40%,
+        rgba(222,229,223,.5) 75%,
+        var(--bg-color)
+    ); */
+
+    z-index:3;
+
+}
+
+
+/* ==================================================
+ANIMATION
+================================================== */
+
+@keyframes cloudReveal {
+
+    from {
+        opacity:0;
+        transform:scale(1.08);
+    }
+
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* ==================================================
+READ MORE
+================================================== */
+
+.read-more-container {
+
+    text-align:center;
+    margin-top:30px;
+
+}
+
+
+.read-more-link.read-more-link {
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:1rem;
+    height:51px;
+    width:150px;
+    padding:0;
+    box-sizing:border-box;
+    border-width:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-radius:9999px;
+    font-family:var(--font-manrope);
+
+    font-weight:600;
+
+    font-size:.875rem;
+    line-height:1.25rem;
+
+    letter-spacing:0;
+
+    text-transform:uppercase;
+
+    color:#b91515;
+    text-decoration:none;
+    transition:background-color .25s ease, color .25s ease, border-color .25s ease;
+
+}
+
+.read-more-link.read-more-link:hover {
+
+    background-color:#ffd28f;
+    border-color:#ffd28f;
+    color:#fff;
+
+}
+
+.read-more-link.read-more-link:hover::after {
+
+    display:none;
+
+}
+
+
+.read-more-link.read-more-link .arrow {
+
+    display:inline-block;
+
+    font-size:20px;
+
+    animation:none;
+
+}
+
+
+@keyframes slideArrow {
+
+    from {
+        transform:translateX(0);
+    }
+
+    to {
+        transform:translateX(15px);
+    }
+
+}
+
+
+
+/* ==================================================
+TABLETS
+================================================== */
+
+@media(max-width:1024px){
+
+    .top-row{
+        gap:30px;
+    }
+
+    .image-container{
+        min-height:320px;
+    }
+
+}
+
+
+
+/* ==================================================
+MOBILE DEVICES
+================================================== */
+
+@media(max-width:900px){
+
+    .top-row{
+
+        flex-direction:column;
+
+    }
+
+
+    .about-bhutan-magazine .title{
+
+        text-align:center;
+
+        font-size:clamp(22px,6vw,28px);
+
+    }
+
+
+    .top-text{
+
+        order:2;
+
+        width:100%;
+
+        font-size:clamp(15px,4vw,17px);
+
+        line-height:1.6;
+
+    }
+
+
+    .image-container{
+
+        order:1;
+
+        width:100%;
+
+        min-height:280px;
+
+    }
+
+}
+
+
+
+/* ==================================================
+SMALL PHONES
+================================================== */
+
+@media(max-width:480px){
+
+
+    .about-bhutan-magazine .container{
+
+        width:90%;
+
+    }
+
+
+    .image-container{
+
+        min-height:230px;
+
+        aspect-ratio:1/1;
+
+    }
+
+
+    .overlapping-images{
+
+        mask-image:
+        radial-gradient(
+            circle,
+            /* black 55%, */
+            transparent 100%
+        );
+
+        -webkit-mask-image:
+        radial-gradient(
+            circle,
+            /* black 55%, */
+            transparent 100%
+        );
+
+    }
+
+}
+
+
+
+/* ==================================================
+LARGE SCREENS
+================================================== */
+
+@media(min-width:1600px){
+
+    .about-bhutan-magazine .container{
+
+        width:85%;
+
+    }
+
+
+    .top-text{
+
+        font-size:22px;
+
+    }
+
+
+    .image-container{
+
+        min-height:650px;
+
+    }
+
+}

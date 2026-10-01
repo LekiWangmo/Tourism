@@ -1,0 +1,116 @@
+.premium-layout {
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.image-wrapper,
+.main-image {
+    position: absolute;
+    width: 250px; /* Image size */
+    height: 250px; /* Image size */
+    border: 5px solid #073143;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img,
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image-wrapper a,
+.main-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper .image-text,
+.main-image .image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.image-wrapper:hover,
+.main-image:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+/* Center image positioning */
+.main-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Top left, top right, bottom left, and bottom right positioning */
+.image-wrapper.top-left {
+    top: 10%;
+    left: 10%;
+}
+
+.image-wrapper.top-right {
+    top: 10%;
+    right: 10%;
+}
+
+.image-wrapper.bottom-left {
+    bottom: 10%;
+    left: 10%;
+}
+
+.image-wrapper.bottom-right {
+    bottom: 10%;
+    right: 10%;
+}
+
+/* ================= MEDIA QUERIES FOR RESPONSIVENESS ================= */
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .image-wrapper,
+    .main-image {
+        width: 200px; /* Smaller images for mobile/tablets */
+        height: 200px;
+    }
+
+    .image-wrapper .image-text,
+    .main-image .image-text {
+        font-size: 12px; /* Smaller text on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-wrapper,
+    .main-image {
+        width: 160px; /* Smaller size for very small screens */
+        height: 160px;
+    }
+}

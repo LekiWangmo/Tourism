@@ -1,0 +1,198 @@
+/* =========================
+FEATURED DESTINATIONS SECTION
+========================= */
+.featured-section {
+    background: #ffffff;
+    text-align: center;
+    
+    /* MODIFIED: Section margin (top and bottom padding) is now exactly 100px */
+    padding: 100px 0 100px; 
+}
+
+/* =========================
+PRE HEADING (Updated selector from .subtitle to match your HTML)
+========================= */
+.featured-section .pre-heading {
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d4af37;
+    padding-top: 0;
+    
+    /* MODIFIED: Gap between pre-heading and title is now exactly 100px */
+    margin-top: 0;
+    margin-bottom: 20px; 
+}
+
+/* =========================
+TITLE (Updated selector from .title to match your HTML .team-title)
+========================= */
+.featured-section .team-title {
+    text-align: center;
+    color: #003324;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(22px, 2.5vw, 32px);
+    letter-spacing: 1px;
+    line-height: 1.25;
+    padding: 0;
+    
+    /* MATCHES LAYOUT BALANCE: Clean 40px spacing between title and description */
+    margin: 0 0 20px 0; 
+}
+
+/* =========================
+DESCRIPTION
+========================= */
+.featured-section .description {
+    max-width: 900px;
+    color: #3d443f;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.8;
+    padding: 0;
+    
+    /* MATCHES LAYOUT BALANCE: Clean 40px spacing between description and the grid */
+    margin: 0 auto 40px auto; 
+}
+
+/* =========================
+GRID
+========================= */
+.destination-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+CARD
+========================= */
+.destination-card {
+    position: relative;
+    width: 300px;
+    height: 310px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: 0 12px 30px rgba(0,0,0,.05);
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* =========================
+IMAGE ========================= */
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+OVERLAY
+========================= */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(20,10,5,.9),
+        rgba(20,10,5,.45),
+        rgba(20,10,5,.1)
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+}
+
+/* =========================
+CARD TEXT
+========================= */
+.card-content {
+    text-align: left;
+    color: #fff;
+}
+
+.card-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+/* =========================
+LINK
+========================= */
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d8a63c;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.destination-card:hover .explore-link {
+    gap: 10px;
+}
+
+/* =========================
+TABLET
+========================= */
+@media(max-width:1000px){
+    .destination-card {
+        width: 280px;
+    }
+}
+
+/* =========================
+MOBILE RESPONSIVE INTEGRITY
+========================= */
+@media(max-width:768px){
+    .featured-section {
+        /* Prevents extreme empty scrolling zones on small screen displays */
+        padding: 50px 0; 
+    }
+    .featured-section .pre-heading {
+        margin-bottom: 40px;
+    }
+    .featured-section .team-title {
+        margin-bottom: 25px;
+    }
+    .description {
+        width: 92%;
+        margin: 0 auto 30px;
+        font-size: clamp(14px,3.8vw,17px);
+        line-height: 1.6;
+    }
+    .destination-grid {
+        width: 100%;
+        padding: 0 10px;
+        gap: 15px;
+    }
+    .destination-card {
+        width: 100%;
+        height: 320px;
+        border-radius: 14px;
+    }
+}

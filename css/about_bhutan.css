@@ -1,0 +1,549 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #02331d;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   ABOUT BHUTAN SECTION
+========================= */
+.about-bhutan-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-column,
+.text-column {
+    flex: 1 1 45%;
+}
+
+.bhutan-map {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+.first-paragraph-text,
+.second-paragraph-text,
+.third-paragraph-text,
+.festival-description,
+.culture-description {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #02331d;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* =========================
+   SECTION CONTAINERS
+========================= */
+.festival-section,
+.culture-section {
+    background-color: #fafafa;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* reusable section fix */
+.section-card {
+    background-color: #fafafa;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.festival-heading,
+.culture-heading,
+.language h2 {
+    font-size: 2em;
+    color: #073144;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+.festival-content,
+.culture-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.festival-text,
+.culture-text {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #02331d;
+    text-align: left;
+}
+
+/* =========================
+   IMAGE WRAPPERS
+========================= */
+.festival-image-wrapper,
+.culture-image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN IMAGES */
+.festival-image,
+.culture-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,1,0.5);
+    border: 4px solid #fff;
+    transition: 0.3s ease;
+}
+
+.festival-image:hover,
+.culture-image:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SMALL OVERLAPPING IMAGES
+========================= */
+.small-festival-image {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border: 5px solid #fff;
+    animation: waveAnimation 3s infinite ease-in-out;
+}
+
+.small-culture-image {
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border: 5px solid #fff;
+    animation: waveAnimation 3s infinite ease-in-out;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.find-a-trip-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-find-a-trip {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #02331d, #0a5c3b);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn-find-a-trip:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   LANGUAGE SECTION
+========================= */
+.language {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.language p {
+    max-width: 800px;
+    text-align: left;
+}
+
+/* LIST */
+.language ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.language ul li {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-left: 4px solid #02331d;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.language ul li:hover {
+    background: #02331d;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes waveAnimation {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* =========================
+   RESPONSIVE TYPOGRAPHY
+========================= */
+@media (max-width: 1024px) {
+    body { font-size: 15px; }
+    .festival-heading,
+    .culture-heading { font-size: 1.7em; }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 14px; }
+
+    .festival-content,
+    .culture-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .festival-heading,
+    .culture-heading { font-size: 1.5em; }
+
+    .first-paragraph-text,
+    .second-paragraph-text,
+    .third-paragraph-text,
+    .festival-description,
+    .culture-description {
+        font-size: 0.95em;
+    }
+
+    .small-festival-image,
+    .small-culture-image {
+        position: relative;
+        display: block;
+        margin: 10px auto;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: 60%;
+        animation: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 13px; }
+
+    .festival-heading,
+    .culture-heading { font-size: 1.3em; }
+
+    .first-paragraph-text,
+    .second-paragraph-text,
+    .third-paragraph-text,
+    .festival-description,
+    .culture-description {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+}
+/* =====================================================
+   MOBILE PHONE - SINGLE COLUMN LAYOUT FIX
+   (Small screens: 0px - 600px)
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+
+    /* ABOUT BHUTAN SECTION */
+    .about-bhutan-section .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .image-column,
+    .text-column {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    /* ALL TWO COLUMN SECTIONS */
+    .festival-content,
+    .culture-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 25px;
+        align-items: center;
+    }
+
+
+    .festival-text,
+    .culture-text,
+    .festival-image-wrapper,
+    .culture-image-wrapper {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: justify;
+    }
+
+
+    /* IMAGES */
+    .festival-image,
+    .culture-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* OVERLAPPING IMAGES REMOVE ON MOBILE */
+    .small-festival-image,
+    .small-culture-image {
+
+        position: relative;
+
+        width: 70%;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin: 15px auto;
+
+        display: block;
+
+        animation: none;
+    }
+
+
+    /* SECTIONS */
+    .festival-section,
+    .culture-section,
+    .section-card {
+
+        padding: 25px 15px;
+        margin-top: 15px;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* HEADINGS */
+
+    .festival-heading,
+    .culture-heading,
+    .language h2 {
+
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+
+    /* TEXT */
+
+    .first-paragraph-text,
+    .second-paragraph-text,
+    .third-paragraph-text,
+    .festival-description,
+    .culture-description {
+
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+
+    /* LANGUAGE SECTION */
+    .language {
+        width: 100%;
+        padding: 25px 15px;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+    .language ul {
+        width: 100%;
+    }
+    .language ul li {
+        font-size: 0.95rem;
+    }
+    /* BUTTON */
+
+    .btn-find-a-trip {
+        width: 90%;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+/* =====================================================
+   FIX MOBILE IMAGE OVERFLOW
+===================================================== */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+.festival-section,
+.culture-section,
+.festival-image-wrapper,
+.culture-image-wrapper {
+
+    overflow: hidden;
+
+}
+
+
+
+/* MOBILE OVERLAPPING IMAGE FIX */
+
+@media screen and (max-width:600px) {
+
+
+    .festival-image-wrapper,
+    .culture-image-wrapper {
+
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+
+    }
+
+
+    .small-festival-image,
+    .small-culture-image {
+
+        width:45%;
+
+        max-width:150px;
+
+        position:absolute;
+
+        top:15px;
+
+    }
+
+
+    .small-festival-image {
+
+        right:10px;
+
+    }
+
+
+    .small-culture-image {
+
+        left:10px;
+
+    }
+
+
+}
+
+/* =========================
+   MOBILE BUTTON FIX
+========================= */
+
+@media screen and (max-width:600px) {
+
+    .find-a-trip-btn {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .btn-find-a-trip {
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: auto;
+        min-width: 250px;
+
+        padding: 12px 20px;
+
+        font-size: 1rem;
+        font-weight: 700;
+
+        white-space: nowrap;   /* Prevent text from breaking */
+        box-sizing: border-box;
+
+    }
+
+}

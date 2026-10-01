@@ -1,0 +1,109 @@
+/* ================== Team Members Slider ================== */
+
+.team-slider-section {
+    padding: 60px 0;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.team-slider-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0c3c2d;
+    font-weight: 700;
+}
+
+.team-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.team-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.team-slide {
+    position: relative;
+    flex: 0 0 33.3333%; /* Show 3 slides at a time */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.team-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+.team-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.team-overlay:hover {
+    background: rgba(12, 60, 45, 0.9);
+}
+
+/* Navigation Arrows */
+.team-slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: #0c3c2d;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.team-slider-nav:hover {
+    background: #0c3c2d;
+    color: #fff;
+}
+
+.team-slider-nav.prev {
+    left: 10px;
+}
+
+.team-slider-nav.next {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .team-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-slide {
+        flex: 0 0 100%;
+    }
+}

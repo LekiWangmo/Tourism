@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef4ed;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Admin Login Section */
+.admin-login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eef4ed;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #555;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    background-color: #e9f5ff;
+    border-color: #4CAF50; /* Green Tarema border on focus */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50; /* Green Tarema button */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #2C6B2F; /* Even darker green on click */
+}
+
+/* Error message */
+.error-message {
+    color: #d9534f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+

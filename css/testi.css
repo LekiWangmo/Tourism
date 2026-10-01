@@ -1,0 +1,236 @@
+
+
+/* ===============================
+   Testimonials Section
+================================ */
+.testimonials-section {
+    background: linear-gradient(135deg, #F5F7FA, #E3E7ED);
+    padding: 40px 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container */
+.container-fixed {
+    max-width: 1200px;
+    margin: 0 auto;
+	text-align: fixed;
+}
+
+/* Pre-Heading */
+.testimonials-section .pre-heading {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #d4af37;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.testimonials-section .pre-heading::before,
+.testimonials-section .pre-heading::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background: #d4af37;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+/* Main Heading */
+.testimonial-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Description */
+.testimonials-section .section-description {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 70px auto;
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.9;
+    color: #555;
+    font-weight: 400;
+    position: relative;
+}
+
+.testimonials-section .section-description::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: #d4af37;
+    margin: 20px auto 0;
+}
+
+
+/* ===============================
+   Testimonial Card
+================================ */
+.card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 20px 40px 20px; /* enough space at top and bottom */ 
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   Header
+================================ */
+.header{
+  background: #1F3A5F;
+  padding: 10px 0 80px 0;
+}
+
+.title-script{
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.title-main{
+  color: #2BB3F3;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* ===============================
+   Avatar
+================================ */
+.avatar-wrapper {
+  margin-top: 10px; /* adjust to your taste */
+  text-align: center;
+}
+
+.avatar{
+  width: 120px;   /* bigger */
+  height: 120px;  /* bigger */
+  border-radius: 50%;
+  border: 6px solid #fff;
+  outline: 4px solid #2BB3F3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover{
+  transform: scale(1.05);
+}
+
+/* ===============================
+   User Info
+================================ */
+.user-info h3{
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.user-info p{
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ===============================
+   Stars
+================================ */
+.stars{
+  margin-top: 10px;
+  color: #2BB3F3;
+  font-size: 16px;
+}
+
+/* ===============================
+   Testimonial Message
+================================ */
+.testimonial{
+  width: 85%;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #777;
+  position: relative;
+  text-align: justify;
+}
+
+/* Corner borders decoration */
+.testimonial:before,
+.testimonial:after{
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-color: #2BB3F3;
+  border-style: solid;
+}
+
+.testimonial:before{
+  top: 0;
+  left: 0;
+  border-width: 3px 0 0 3px;
+}
+
+.testimonial:after{
+  bottom: 0;
+  right: 0;
+  border-width: 0 3px 3px 0;
+}
+
+/* ===============================
+   Navigation Buttons
+================================ */
+.navigation {
+  display: flex;               /* flex layout */
+  justify-content: space-between; /* push buttons to opposite ends */
+  width: 100%;                 /* take full width of card */
+  padding: 0 20px 30px 20px;   /* equal left/right padding */
+  box-sizing: border-box;      /* ensure padding doesn't break width */
+}
+
+.nav-btn{
+	background: #2BB3F3;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 8px 18px;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.nav-btn:hover{
+	background: #1F3A5F;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.nav-btn:active{
+  transform: scale(0.95);
+}
+
+/* ===============================
+   Responsive (Optional)
+================================ */
+@media (max-width: 480px){
+  .card{
+    width: 90%;
+  }
+
+  .navigation{
+    padding: 0 20px 30px 20px;
+  }
+}

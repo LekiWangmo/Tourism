@@ -1,0 +1,111 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: #005a4e;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.site-header .logo {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* ===== CONTACT INTRO ===== */
+.contact-intro {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-intro h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+/* ===== CONTACT DETAILS ===== */
+.contact-details {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    flex: 1 1 400px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-row button {
+    background-color: #005a4e;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-row button:hover {
+    background-color: #003d36;
+}
+
+/* ===== MAP ===== */
+.contact-map {
+    margin-bottom: 40px;
+}
+
+.contact-map h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #eee;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #555;
+}
